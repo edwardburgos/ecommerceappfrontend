@@ -22,7 +22,6 @@ export default function NavBar() {
                             :
                             data.getCompany.brand
                     }
-                   {/* { data.getCompany.brand} */}
                 </Navbar.Brand>
 
                 <Navbar.Offcanvas
