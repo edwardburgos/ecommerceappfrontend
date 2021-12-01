@@ -1,6 +1,5 @@
 import React from 'react';
 import s from './NavBar.module.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Container, Offcanvas, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
 import { useCompanyBrand } from '../../models/company/custom-hooks';
 
@@ -8,15 +7,23 @@ export default function NavBar() {
 
     const { loading, error, data } = useCompanyBrand();
 
-    if (loading) return null
+    if (loading) { console.log('CRAGNDO'); return null }
 
-    if (error) return null
+    if (error) { console.log(error); return null }
 
     return (
         <Navbar bg="light" expand={false} className={s.navbar}>
             <Container fluid className={s.navbarContainer}>
                 <Navbar.Toggle aria-controls="offcanvasNavbar" className={s.toogleButton} />
-                <Navbar.Brand href="#" className={s.navbarBrand}>{data.getCompany.brand}</Navbar.Brand>
+                <Navbar.Brand href="#" className={s.navbarBrand}>
+                    {
+                        data.getCompany.logo ?
+                            <img src={data.getCompany.logo} alt='Logo' className={s.logo} />
+                            :
+                            data.getCompany.brand
+                    }
+                   {/* { data.getCompany.brand} */}
+                </Navbar.Brand>
 
                 <Navbar.Offcanvas
                     id="offcanvasNavbar"
