@@ -23,3 +23,29 @@ code {
 .carousel-indicators button .active {
   background-color: black !important;
 }
+
+/* Custom react-bootstrap Navbar Styles*/
+
+.nav-link {
+  text-decoration: none !important;
+  color: black !important;
+  padding-left: 0 !important;
+}
+
+.nav-link:focus {
+  color:#0d6efd !important; 
+}
+
+.offcanvas-body {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+}
+
+.offcanvas-header {
+  display: none !important;
+}
+
+#offcanvasNavbar {
+  top: 49px !important;
+}
+

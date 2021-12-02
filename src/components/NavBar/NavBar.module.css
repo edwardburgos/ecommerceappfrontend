@@ -1,21 +1,13 @@
 .toogleButton {
-    padding: 0 !important;
-    border: 0 !important;
-    margin-right: 16px !important;
-    display: flex !important;
-    align-items: center !important;
-    margin-right: auto !important;
+    width: 24px;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    transition: opacity 0.3s;
 }
 
-.toogleButton span {
-    height: 20px !important;
-    width: 20px !important;
-}
-
-.toogleButton:focus {
-    text-decoration: none !important;
-    outline: 0 !important;
-    box-shadow: none !important;
+.toogleButton:active {
+    opacity: 0;
 }
 
 .navbar {
@@ -38,4 +30,37 @@
 
 .logo {
     height: 30px;
+}
+
+.firstLevel {
+    font-size: 1.3rem !important;
+    font-weight: 600;
+}
+
+.secondLevel {
+    padding-left: 10px !important;
+    font-size: 1.1rem !important;
+    font-weight: 600;
+}
+
+.thirdLevel {
+    padding-left: 20px !important;
+}
+
+.show {
+    transform: none;
+}
+
+.hide {
+    transform: translateX(-100%);
+}
+
+.sidebar {
+    width: 100%;
+    position: absolute;
+    top: 49px;
+    background-color: rgba(var(--bs-light-rgb),var(--bs-bg-opacity))!important;
+    z-index: 1000;
+    padding: 0 5% 0 5%;
+    transition: transform .3s ease-in-out;
 }
