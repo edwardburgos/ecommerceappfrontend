@@ -9,7 +9,8 @@ export type Category = {
     id: string,
     name: string,
     showInNav: boolean,
-    level: string
+    level: string,
+    url: string
 }
 
 export type SecondLevelCategory = {
@@ -17,6 +18,7 @@ export type SecondLevelCategory = {
     name: string,
     showInNav: boolean,
     level: string,
+    url: string,
     categories: Category[]
 }
 
@@ -25,5 +27,6 @@ export type FirstLevelCategory = {
     name: string,
     showInNav: boolean,
     level: string,
+    url: string,
     categories: SecondLevelCategory[]
 }
