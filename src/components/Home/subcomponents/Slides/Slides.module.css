@@ -1,4 +1,15 @@
 .slideCaption {
     margin-bottom: 0;
     padding: 10px 0 23px 5%;
+    display: block;
+}
+
+.carousel {
+    margin-top: 49px;
+}
+
+@media screen and (min-width: 576px) { 
+    .slideCaption {
+        display: none;
+    }
 }
