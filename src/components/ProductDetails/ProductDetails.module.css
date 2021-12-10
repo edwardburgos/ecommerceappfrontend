@@ -1,0 +1,62 @@
+.container {
+    margin-top: 49px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.imageContainer {
+    width: 100%;
+}
+
+.descriptionContainer {
+    margin-top: 16px;
+    justify-content: center;
+    width: 100%;
+    padding: 0 5%;
+}
+
+.price {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.addToCart {
+    width: 100%;
+    margin: 16px 0;
+}
+
+.unitsSelectorContainer {
+    max-width: 236px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+@media screen and (min-width: 473px) { 
+    .unitsSelectorContainer {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media screen and (min-width: 576px) { 
+    .imageContainer {
+        width: 40%;
+    }
+    .descriptionContainer {
+        width: 60%;
+    }
+    .unitsSelectorContainer {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+@media screen and (min-width: 787px) { 
+    .unitsSelectorContainer {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
