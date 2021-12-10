@@ -30,3 +30,14 @@ export type FirstLevelCategory = {
     url: string,
     categories: SecondLevelCategory[]
 }
+
+export type ProductType = {
+    id: string,
+    url: string,
+    name: string,
+    description: string | null,
+    price: number,
+    currency: string,
+    stars: number | null,
+    photo: string
+}
