@@ -1,9 +1,4 @@
 import s from './UnitsSelector.module.css';
-import { ProductType } from '../../extras/types';
-import { Link } from 'react-router-dom';
-import { useParams } from "react-router-dom";
-import { useProduct } from "../../models/products/custom-hooks"
-import { Carousel } from 'react-bootstrap';
 import add from '../../assets/add.svg';
 import remove from '../../assets/remove.svg';
 
