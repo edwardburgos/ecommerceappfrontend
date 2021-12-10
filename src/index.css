@@ -25,16 +25,15 @@ code {
 }
 
 /* Custom react-bootstrap Navbar Styles*/
-
 .nav-link {
-  text-decoration: none !important;
-  color: black !important;
   padding-left: 0 !important;
 }
 
-.nav-link:focus {
-  color:#0d6efd !important; 
+.nav-link, .nav-link:focus {
+  text-decoration: none !important;
+  color: black !important;
 }
+
 
 .offcanvas-body {
   padding-top: 8px !important;
@@ -49,3 +48,20 @@ code {
   top: 49px !important;
 }
 
+.button {
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  border: black 1px solid;
+  padding: 8px 12px;
+  font-weight: 500;
+}
+
+.button:hover {
+  background-color: white;
+  color: black;
+}
+
+.bold {
+  font-weight: 600;
+}
