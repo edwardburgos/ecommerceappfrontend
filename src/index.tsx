@@ -11,6 +11,10 @@ import {
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import CategoryContent from './components/CategoryContent/CategoryContent';
+import Home from './components/Home/Home';
+import ProductDetails from './components/ProductDetails/ProductDetails';
 
 // Apollo client configuration
 const client = new ApolloClient({
@@ -21,9 +25,17 @@ const client = new ApolloClient({
 ReactDOM.render(
   <Provider store={store}>
     <ApolloProvider client={client}>
-      <React.StrictMode>
-        <App />
-      </React.StrictMode>
+      <BrowserRouter>
+        <React.StrictMode>
+          <Routes>
+            <Route path="/" element={<App />} >
+              <Route path="" element={<Home />} />
+              <Route path=":categories" element={<CategoryContent />} />
+              <Route path=":categories/:product" element={<ProductDetails />} />
+            </Route>
+          </Routes>
+        </React.StrictMode>
+      </BrowserRouter>
     </ApolloProvider>
   </Provider>,
   document.getElementById('root')
